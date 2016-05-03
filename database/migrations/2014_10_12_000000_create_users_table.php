@@ -17,6 +17,8 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            //linea de codigo adicional, campo type que puede ser solo de tipo member y admin (check)
+            $table->enum('type', ['member', 'admin'])->default('member');
             $table->rememberToken();
             $table->timestamps();
         });
