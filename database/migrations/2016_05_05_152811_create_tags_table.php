@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddTagsTable extends Migration
+class CreateTagsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,14 +14,9 @@ class AddTagsTable extends Migration
     {
         Schema::create('tags', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
+            $table->string('name');
             $table->timestamps();
         });
-
-        //Relacion de muchos a muchos necesita una tabla relacional llamada pibot
-        //Laravel indica que la tabla pibot debe llevar el nombre de manera singular de las dos tablas 
-        //que se vallan a relacionar (Es decir el nombre exacto de las dos tablas sin s)
-        //Articulos & tags = articulos & tags = articulos_tags
 
         Schema::create('articulo_tag', function(Blueprint $table){
             $table->increments('id');

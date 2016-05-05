@@ -24,7 +24,16 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function articulos(){
+    /*public function articulos(){
         return $this->hasMany('App/Articulo');
+    }*/
+    //----------------------------------------
+    public function tasks(){
+        return $this->hasMany('Task::class');
+    }
+    //----------------------------------------
+
+    public function articulos(){
+        return $this->hasMany('App\Articulo');
     }
 }

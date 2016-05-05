@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tag extends Model
 {
-    protected $table = 'tags';
+    protected $table = "tags";
 
-    protected $fillable = ['nombre'];
+    protected $fillable = ['name'];
 
     public function articulos(){
-    	return $this->belongsToMany('App\Articulo');
+    	return $this->belongsToMany('App\Articulo')->withTimestamps();
     }
 }

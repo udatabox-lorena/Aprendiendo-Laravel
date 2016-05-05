@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePicnicsTable extends Migration
+class CreateTasksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,21 +12,12 @@ class CreatePicnicsTable extends Migration
      */
     public function up()
     {
-        
-        Schema::create('picnics', function(Blueprint $table)
-        {
+        Schema::create('tasks', function (Blueprint $table) {
             $table->increments('id');
-
+            $table->integer('user_id')->index();
             $table->string('name');
-            $table->integer('taste_level'); // how tasty is this picnic?
-
             $table->timestamps();
         });
-
-        /*Schema::create('picnics', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
-        });*/
     }
 
     /**
@@ -36,6 +27,6 @@ class CreatePicnicsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('picnics');
+        Schema::drop('tasks');
     }
 }
