@@ -3,12 +3,23 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\SluggableInterface;
+use Cviebrock\EloquentSluggable\SluggableTrait;
 
-class Articulo extends Model
+class Articulo extends Model implements SluggableInterface
 {
+    use SluggableTrait;
+
+    protected $sluggable = [
+        'build_from' => 'titulo',
+        'save_to'    => 'slug',
+    ];
+
     protected $table = "articulos";
 
     protected $fillable = ['titulo', 'contenido', 'user_id', 'categoria_id'];
+
+    
 
     public function categoria(){
     	return $this->belongsTo('App\Categoria');

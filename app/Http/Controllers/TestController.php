@@ -11,13 +11,10 @@ use App\Articulo;
 class TestController extends Controller
 {
     public function view($id){
-    	//dd($id);
     	$articulo = Articulo::find($id);
-    	//$articulo->each(function($articulo){
     			$articulo->categoria;
     			$articulo->user;
     			$articulo->tags;
-    	//});
-    	dd($articulo);
+    			return view('test.index', ['prueba' => $articulo]);
     }
 }
