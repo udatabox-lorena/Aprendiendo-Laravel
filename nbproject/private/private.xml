@@ -3,9 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/xampp/htdocs/Aprendiendo-Laravel/config/database.php</file>
+            <file>file:/D:/xampp/htdocs/Aprendiendo-Laravel/resources/views/admin/users/create.blade.php</file>
+            <file>file:/D:/xampp/htdocs/Aprendiendo-Laravel/app/Http/routes.php</file>
             <file>file:/D:/xampp/htdocs/Aprendiendo-Laravel/config/app.php</file>
-            <file>file:/D:/xampp/htdocs/Aprendiendo-Laravel/database/migrations/2014_10_12_000000_create_users_table.php</file>
+            <file>file:/D:/xampp/htdocs/Aprendiendo-Laravel/resources/views/welcome.blade.php</file>
         </group>
     </open-files>
 </project-private>
